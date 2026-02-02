@@ -38,6 +38,8 @@ tcpSocket tcpServer::acceptConnect()
     if (cfd == -1)
     {
         perror("accept");
+        std::cout << "无法连接到客户端" << std::endl;
+        return tcpSocket(cfd);
     }
     char ip[32];
     std::cout << "连接到客户端ip：" << inet_ntop(AF_INET, &addr.sin_addr.s_addr, ip, sizeof(ip)) << "，端口：" << ntohs(addr.sin_port) << std::endl;
