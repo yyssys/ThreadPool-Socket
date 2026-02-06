@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     {
         return -1;
     }
-    std::ifstream file("./message.txt");
+    std::ifstream file("../message.txt");
     if (!file)
     {
         std::cout << "打开文件失败" << std::endl;
